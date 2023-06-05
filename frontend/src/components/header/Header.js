@@ -8,7 +8,7 @@ const Component = styled(AppBar)`
 `;
 
 const Container = styled(Toolbar)`
-    justify-content: center;
+    justify-content: right;
     & > a {
         padding: 20px;
         color: #000;
@@ -23,8 +23,6 @@ const Header = () => {
     return (
         <Component>
             <Container>
-                <Link to="/">HOME</Link>
-                <Link to="/contact">CONTACT</Link>
                 <Link to="/account">LOGOUT</Link>
             </Container>
         </Component>

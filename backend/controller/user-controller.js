@@ -36,7 +36,6 @@ export const loginUser = async (request, response) => {
 
         let match = await bcrypt.compare(request.body.password, user.password);
         if (match) {
-            console.log("------", process.env.ACCESS_SECRET_KEY);
             const accessToken = jwt.sign(
                 user.toJSON(),
                 process.env.ACCESS_SECRET_KEY,

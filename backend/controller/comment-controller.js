@@ -33,9 +33,7 @@ export const getComments = async (request, response) => {
 
 export const deleteComment = async (request, response) => {
     try {
-        console.log("request", request)
         const comment = await Comment.findById(request.params.id);
-        console.log("uuuuss", comment);
         await comment.delete();
 
         response.status(200).json("comment deleted successfully");
